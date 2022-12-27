@@ -11,6 +11,6 @@ class FirstActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        startActivity(SecondActivity.newIntent(this,"Передали строку"))
+        startActivity(SecondActivity.newIntent(this, "Передали строку"))
     }
 }

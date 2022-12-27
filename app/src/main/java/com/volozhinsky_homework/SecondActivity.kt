@@ -6,12 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 
-const val TEXT_EXTRA = "TEXT_EXTRA"
 class SecondActivity : AppCompatActivity() {
 
     companion object {
-        fun newIntent(context: Context,transferString: String):Intent{
-            val intent = Intent(context,SecondActivity::class.java).apply {
+        const val TEXT_EXTRA = "TEXT_EXTRA"
+        fun newIntent(context: Context, transferString: String): Intent {
+            val intent = Intent(context, SecondActivity::class.java).apply {
                 putExtra(TEXT_EXTRA, transferString)
             }
             return intent
@@ -24,5 +24,4 @@ class SecondActivity : AppCompatActivity() {
         val secondTextView = findViewById<TextView>(R.id.secondTextView)
         secondTextView.text = intent.getStringExtra(TEXT_EXTRA)
     }
-
 }
